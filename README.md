@@ -1,6 +1,9 @@
-# RPi_TV
+# Rusty_Pi
 
-simple Rust app communicating with TV using CEC commands.
+Rust system running on Raspberry Pi
+
+# Features (1)
+currently communicates with TV using CEC commands.
 
 # Requirements
 
