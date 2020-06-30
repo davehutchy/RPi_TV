@@ -1,5 +1,5 @@
 [package]
-name = "kodi_runner"
+name = "Rusty_Pi"
 version = "0.1.0"
 authors = ["David Hutchinson <dhutchinson@core-tt.net>"]
 edition = "2018"
