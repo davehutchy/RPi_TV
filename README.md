@@ -1,4 +1,4 @@
-# Rusty_Pi
+# rusty_pi
 
 Rust system running on Raspberry Pi
 
