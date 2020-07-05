@@ -12,7 +12,7 @@ pub fn execute_arg(exe: &str, arg: &str){
 }
 
 //Execute a bash script 
-pub fn run_script(path: &str){
+pub fn run_script(path: std::string::String){
     let _result = Command::new("bash").arg(path).spawn().unwrap().wait();
 }
 
