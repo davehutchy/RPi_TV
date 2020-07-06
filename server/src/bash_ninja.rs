@@ -12,8 +12,10 @@ pub fn execute_arg(exe: &str, arg: &str){
 }
 
 //Execute a bash script 
-pub fn run_script(path: std::string::String){
+pub fn run_script(path: std::string::String) -> std::process::Child {
     println!("Run script with Path: {}",path);
-    let _result = Command::new("bash").arg(path).spawn().unwrap().wait();
+    let _result = Command::new("bash").arg(path).spawn().unwrap();
+    
+    return _result;
 }
 
