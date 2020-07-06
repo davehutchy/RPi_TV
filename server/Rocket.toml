@@ -1,0 +1,26 @@
+[development]
+address = "localhost"
+port = 8000
+workers = 8
+keep_alive = 5
+log = "normal"
+secret_key = "tz3VxMYSz2N6gHgKUwqial16+H83mMggtpzzz5Ix4AM="
+limits = { forms = 32768 }
+
+[staging]
+address = "0.0.0.0"
+port = 8000
+workers = 8
+keep_alive = 5
+log = "normal"
+secret_key = "8Fl3ezfGVL6JJP0OAj00tDOcAah47RuNTzKDdJ+fZMg="
+limits = { forms = 32768 }
+
+[production]
+address = "0.0.0.0"
+port = 8000
+workers = 8
+keep_alive = 5
+log = "critical"
+secret_key = "5mV3FhQgoSWqOFAdQ4EDDptdMOfwndXxQ1UFgTYTlCI="
+limits = { forms = 32768 }
