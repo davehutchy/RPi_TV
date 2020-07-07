@@ -28,20 +28,27 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
 
   void _launchKodi() async{
-    var url = "http://192.168.20.9:8000/kodi";
+    //var url = "http://192.168.20.9:8000/kodi";
+    //await http.get(url);
+  }
+
+  void _powerOn(){
+
+  }
+
+  void _testEspSensor() async{
+    var url = "http://192.168.20.55/test";
     await http.get(url);
   }
-  Widget _buildButton(String title, Widget leading){
+
+  Widget _buildButton(String title, Widget leading, Function onTap){
     return Card(
       color: Colors.grey[700],
       child: ListTile(
-        
         contentPadding: EdgeInsets.all(10),
         leading: leading,
         title: Text(title, style: TextStyle(color: Colors.white, fontSize: 20)),
-        onTap: () {
-          _launchKodi();
-          },
+        onTap: onTap
       ),
     );
   }
@@ -49,8 +56,9 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget _buildButtonList(){
     return ListView(
       children: <Widget>[
-        _buildButton("POWER ON", Icon(Icons.power_settings_new, size: 40, color: Colors.white)),
-        _buildButton("RUN KODI", Image.asset('assets/images/kodi_logo.png', width: 40))
+        _buildButton("POWER ON", Icon(Icons.power_settings_new, size: 40, color: Colors.white), _powerOn),
+        _buildButton("RUN KODI", Image.asset('assets/images/kodi_logo.png', width: 40), (){_launchKodi();}),
+        _buildButton("TEST ESP SENSOR", Image.asset('assets/images/espressif_logo.png', width: 40), (){ _testEspSensor();})
       ]);
   }
 
